@@ -1,0 +1,22 @@
+{
+  "testimonials": [
+    {
+      "name": "Roronoa Zoro",
+      "photo": "https://i.pinimg.com/564x/d6/f2/8b/d6f28b9a2b8b6795e2c1e593fc451c8d.jpg",
+      "rating": 5,
+      "text": "Even after a long journey, this food hits the spot! Great taste and huge portions, perfect for a swordsman like me."
+    },
+    {
+      "name": "Monkey D. Luffy",
+      "photo": "https://miro.medium.com/v2/resize:fit:736/1*YqfVlyCe06DfcPsR3kpYrw.jpeg",
+      "rating": 5,
+      "text": "This food is the best! I could eat here all day! Can't wait to come back for more."
+    },
+    {
+      "name": "Vinsmoke Sanji",
+      "photo": "https://revolucaonerd.com/wordpress/wp-content/files/revolucaonerd.com/2023/02/sanji-one-piece.webp",
+      "rating": 5,
+      "text": "Top-notch quality! The food here is like a symphony for the taste buds. A culinary masterpiece worth savoring."
+    }
+  ]
+}

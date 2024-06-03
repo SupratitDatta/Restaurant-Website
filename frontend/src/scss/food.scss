@@ -1,0 +1,122 @@
+$color_1: #555555;
+$color_2: #fff;
+
+#food {
+    padding: 15vh 0 8vh 0;
+
+    h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 400;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        color: $color_1;
+    }
+
+    .food-container {
+        display: flex;
+        justify-content: space-between;
+
+        .img-container {
+            margin: 0 1rem;
+            position: relative;
+
+            &:hover {
+                border-radius: 20px;
+                box-shadow: -1px 0px 37px 0px rgba(77, 169, 245, 0.75);
+                -webkit-box-shadow: -1px 0px 37px 0px rgba(51, 121, 212, 0.75);
+                -moz-box-shadow: -1px 0px 37px 0px rgba(37, 118, 203, 0.75);
+            }
+
+            img {
+                border-radius: 20px;
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(100, 100, 100, 0.8);
+                opacity: 0;
+                z-index: 1;
+                transform: scaleY(0);
+                transform-origin: 100% 100%;
+                transition: all 0.3s ease-in-out;
+                border-radius: 20px;
+            }
+
+            &:hover {
+                &::after {
+                    opacity: 1;
+                    transform: scaleY(1);
+                }
+
+                .img-content {
+                    opacity: 1;
+                    top: 40%;
+
+                    h3 {
+                        color: #ffffff;
+                    }
+                }
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                margin: auto;
+                max-height: 300px;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            .img-content {
+                position: absolute;
+                top: 70%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                z-index: 2;
+                text-align: center;
+                transition: all 0.3s ease-in-out 0.1s;
+
+                h3 {
+                    color: $color_2;
+                    font-size: 2.2rem;
+                }
+
+                a {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .food-container {
+        flex-direction: column;
+        align-items: stretch;
+
+
+        .food-type {
+            padding: 10px 0px;
+            border-radius: 15px;
+            box-shadow: -1px 0px 37px 0px rgba(135, 135, 135, 0.75);
+            -webkit-box-shadow: -1px 0px 37px 0px rgba(90, 90, 90, 0.75);
+            -moz-box-shadow: -1px 0px 37px 0px rgba(66, 66, 66, 0.75);
+
+            &:not(:last-child) {
+                margin-bottom: 3rem;
+            }
+
+            .img-container {
+                margin: 0;
+            }
+        }
+    }
+}

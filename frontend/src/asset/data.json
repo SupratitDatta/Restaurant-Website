@@ -1,0 +1,40 @@
+{
+    "menu": [
+        {
+            "name": "Butter Chicken",
+            "description": "Tender chicken in creamy tomato sauce, served with salad.",
+            "price": "₹ 320",
+            "image": "https://www.licious.in/blog/wp-content/uploads/2020/10/butter-chicken--600x600.jpg"
+        },
+        {
+            "name": "Chicken Biryani",
+            "description": "Fragrant rice cooked with chicken and spices, served with raita.",
+            "price": "₹ 250",
+            "image": "https://www.licious.in/blog/wp-content/uploads/2022/06/chicken-hyderabadi-biryani-01.jpg"
+        },
+        {
+            "name": "Chicken Tikka",
+            "description": "Juicy grilled chicken pieces with mint chutney and salad.",
+            "price": "₹ 200",
+            "image": "https://www.whiskaffair.com/wp-content/uploads/2020/06/Chicken-Tikka-2-3.jpg"
+        },
+        {
+            "name": "Paneer Tikka Masala",
+            "description": "Grilled paneer in creamy tomato sauce, bursting with flavors.",
+            "price": "₹ 240",
+            "image": "https://www.sanjanafeasts.co.uk/wp-content/uploads/2023/07/Paneer-Tikka-Kebabs-on-a-platter-with-fresh-naan-bread-720x720.jpg"
+        },
+        {
+            "name": "Shahi Paneer",
+            "description": "Paneer in a rich and creamy gravy made with nuts and cream.",
+            "price": "₹ 250",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8pHHh6_xy0A11WpBEYtf04Tx_JnU5vXzjgg&s"
+        },
+        {
+            "name": "Dal Makhani",
+            "description": "Indulgent lentil curry cooked with butter and cream.",
+            "price": "₹ 200",
+            "image": "https://www.funfoodfrolic.com/wp-content/uploads/2023/04/Dal-Makhani-Blog.jpg"
+        }
+    ]
+}

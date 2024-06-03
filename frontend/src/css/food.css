@@ -1,0 +1,100 @@
+#food {
+  padding: 15vh 0 8vh 0;
+}
+#food h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: #555555;
+}
+#food .food-container {
+  display: flex;
+  justify-content: space-between;
+}
+#food .food-container .img-container {
+  margin: 0 1rem;
+  position: relative;
+}
+#food .food-container .img-container:hover {
+  border-radius: 20px;
+  box-shadow: -1px 0px 37px 0px rgba(77, 169, 245, 0.75);
+  -webkit-box-shadow: -1px 0px 37px 0px rgba(51, 121, 212, 0.75);
+  -moz-box-shadow: -1px 0px 37px 0px rgba(37, 118, 203, 0.75);
+}
+#food .food-container .img-container img {
+  border-radius: 20px;
+}
+#food .food-container .img-container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(100, 100, 100, 0.8);
+  opacity: 0;
+  z-index: 1;
+  transform: scaleY(0);
+  transform-origin: 100% 100%;
+  transition: all 0.3s ease-in-out;
+  border-radius: 20px;
+}
+#food .food-container .img-container:hover::after {
+  opacity: 1;
+  transform: scaleY(1);
+}
+#food .food-container .img-container:hover .img-content {
+  opacity: 1;
+  top: 40%;
+}
+#food .food-container .img-container:hover .img-content h3 {
+  color: #ffffff;
+}
+#food .food-container .img-container img {
+  display: block;
+  width: 100%;
+  margin: auto;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+#food .food-container .img-container .img-content {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 2;
+  text-align: center;
+  transition: all 0.3s ease-in-out 0.1s;
+}
+#food .food-container .img-container .img-content h3 {
+  color: #fff;
+  font-size: 2.2rem;
+}
+#food .food-container .img-container .img-content a {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .food-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .food-container .food-type {
+    padding: 10px 0px;
+    border-radius: 15px;
+    box-shadow: -1px 0px 37px 0px rgba(135, 135, 135, 0.75);
+    -webkit-box-shadow: -1px 0px 37px 0px rgba(90, 90, 90, 0.75);
+    -moz-box-shadow: -1px 0px 37px 0px rgba(66, 66, 66, 0.75);
+  }
+  .food-container .food-type:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  .food-container .food-type .img-container {
+    margin: 0;
+  }
+}

@@ -1,0 +1,196 @@
+$color_1: #555;
+$color_2: #666;
+$color_3: #1385c7;
+
+@keyframes about-img-animation {
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes about-text-animation {
+    100% {
+        transform: translate(0);
+    }
+}
+
+.showcase-area {
+    height: 50vh;
+    background: linear-gradient(rgba(240, 240, 240, 0.144), rgba(255, 255, 255, 0.336)), url("https://static.vecteezy.com/system/resources/thumbnails/026/722/420/small_2x/illustration-of-indian-national-food-view-from-above-generative-ai-photo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .showcase-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        font-size: 1.6rem;
+        color: white;
+        font-family: "Lucida Console", "Courier New", monospace;
+
+        .main-title {
+            text-transform: uppercase;
+            padding-top: 10vh;
+            margin-bottom: 1vh;
+            font-weight: 800;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: black;
+        }
+    }
+}
+
+
+#about {
+    padding: 50px 0;
+    background: #f5f5f7;
+
+    .about-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .about-text {
+        flex: 1 1 400px;
+        padding: 30px;
+        margin: auto;
+        transform: translate(-150%);
+        animation: about-text-animation 1s ease-in-out forwards;
+
+        h2 {
+            font-size: 2.3rem;
+            color: $color_3;
+            font-family: 'Arial, Helvetica, sans-serif';
+            margin-bottom: 2vh;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: $color_1;
+            text-align: justify;
+        }
+
+        .small {
+            font-size: 30px;
+            color: $color_2;
+            font-weight: 600;
+        }
+    }
+
+    .img_container {
+        position: relative;
+        width: 100%;
+        margin: auto;
+        flex: 1 1 400px;
+        padding: 30px;
+        transform: translateX(150%);
+        animation: about-img-animation 1s ease-in-out forwards;
+
+        &:hover &:not(:hover) {
+            transform: scale(1);
+        }
+
+        img {
+            display: block;
+            height: 180px;
+            max-width: 45%;
+            margin: auto;
+            object-fit: cover;
+            object-position: right;
+        }
+
+        .container__img {
+            position: absolute;
+            width: 60%;
+            z-index: 10;
+            transition: all 0.3s;
+            border-radius: 10px;
+            box-shadow: 0 .5rem 4rem rgba(0, 0, 0, 0.3);
+            outline-offset: 1rem;
+
+            &:hover {
+                outline: 0.3rem solid rgb(43, 149, 249);
+                transform: translateY(-1rem) scale(1.05);
+                box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.5);
+                z-index: 20;
+            }
+        }
+
+        .img-1 {
+            top: -12rem;
+            left: 6rem;
+        }
+
+        .img-2 {
+            top: -6rem;
+            left: 20rem;
+        }
+
+        .img-3 {
+            top: 2rem;
+            left: 14rem;
+        }
+
+        .img-4 {
+            top: -2rem;
+            left: 1rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 1116px) {
+    #about {
+        .about-wrapper {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .about-text {
+            .small {
+                text-align: center;
+            }
+        }
+
+        .img_container {
+            flex: 1 1 220px;
+
+            img {
+                height: 90px;
+                width: 30%;
+            }
+
+            .container__img {
+                width: 40%;
+            }
+
+            .img-1 {
+                top: 0rem;
+                left: 5rem;
+            }
+
+            .img-2 {
+                top: 5rem;
+                left: 1rem;
+            }
+
+            .img-3 {
+                top: 3rem;
+                left: 12rem;
+            }
+
+            .img-4 {
+                top: 8rem;
+                left: 8rem;
+            }
+        }
+    }
+
+    .about {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 0px;
+    }
+}

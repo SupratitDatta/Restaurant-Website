@@ -1,0 +1,151 @@
+:root {
+  --color-blue: #0094ff;
+  --color-white: #fff;
+  --curve: cubic-bezier(0.420, 0.000, 0.275, 1.155);
+}
+
+.notFound {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  background-color: #f2f9fe;
+}
+.notFound .container {
+  max-width: 90vw;
+  text-align: center;
+}
+.notFound .container img {
+  margin-bottom: 2rem;
+}
+.notFound .container h1 {
+  font-size: 2.75rem;
+  font-weight: 300;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+.notFound .container h3 {
+  font-weight: 300;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+.notFound .container .star {
+  position: absolute;
+  animation: grow 3s infinite;
+  fill: var(--color-blue);
+  opacity: 0;
+}
+.notFound .container .star:nth-child(1) {
+  width: 12px;
+  height: 12px;
+  left: 12px;
+  top: 16px;
+}
+.notFound .container .star:nth-child(2) {
+  width: 18px;
+  height: 18px;
+  left: 168px;
+  top: 84px;
+}
+.notFound .container .star:nth-child(3) {
+  width: 10px;
+  height: 10px;
+  left: 32px;
+  top: 162px;
+}
+.notFound .container .star:nth-child(4) {
+  width: 20px;
+  height: 20px;
+  left: 82px;
+  top: -12px;
+}
+.notFound .container .star:nth-child(5) {
+  width: 14px;
+  height: 14px;
+  left: 125px;
+  top: 162px;
+}
+.notFound .container .star:nth-child(6) {
+  width: 10px;
+  height: 10px;
+  left: 16px;
+  top: 16px;
+}
+.notFound .container .star:nth-child(1) {
+  animation-delay: 1.5s;
+}
+.notFound .container .star:nth-child(2) {
+  animation-delay: 3s;
+}
+.notFound .container .star:nth-child(3) {
+  animation-delay: 4.5s;
+}
+.notFound .container .star:nth-child(4) {
+  animation-delay: 6s;
+}
+.notFound .container .star:nth-child(5) {
+  animation-delay: 7.5s;
+}
+.notFound .container .star:nth-child(6) {
+  animation-delay: 9s;
+}
+.notFound .container .checkmark {
+  position: relative;
+  padding: 30px;
+  animation: checkmark 5m var(--curve) both;
+}
+.notFound .container .checkmark__check {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate3d(-50%, -50%, 0);
+  fill: var(--color-white);
+}
+.notFound .container .checkmark__background {
+  fill: var(--color-blue);
+  animation: rotate 35s linear both infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes grow {
+  0%, 100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes checkmark {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  10%, 50%, 90% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@media (max-width: 600px) {
+  .notFound {
+    padding: 30px 20px;
+  }
+  .notFound .container img {
+    width: 100%;
+  }
+  .notFound .container .notFound .container h1 {
+    font-size: 1.75rem;
+  }
+}
